@@ -39,13 +39,11 @@ int main(int argc,char *argv[])
 
 	ret=connect(sfd,(struct sockaddr*)(&addr),len);
 
-	printf("ret=%d errno=%d str=%s\n",ret,errno,strerror(errno));
 	
 	while(1)
 	{
 		gets(buf,1024);	
 		ret=write(sfd,buf,strlen(buf));
-		printf("write ret=%d\n",ret);
 		
 		while(1)
 		{
@@ -56,7 +54,6 @@ int main(int argc,char *argv[])
 			}
 			else if (ret==0)
 			{
-				printf("server closed\n");
 				break;
 			}
 			
