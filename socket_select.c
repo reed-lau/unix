@@ -101,6 +101,8 @@ int main(int argc,char *argv[])
 								break;
 							}
 							printf("==%s\n",buf);
+							sprintf(buf,"HTTP/1.1 200 OK\r\n");
+							sprintf(buf,"HTTP/1.1 204 OK\r\nDate: Sat, 31 Dec 2005 23:59:59 GMT\r\nContent-Type: text/html;\r\nContent-Length: 12\r\n\r\n＜html＞yes ＜/html＞");
 							write(i,buf,strlen(buf));
 							break;
 						}
