@@ -6,7 +6,7 @@ http://menehune.opt.wfu.edu/Kokua/More_SGI/007-2478-008/sgi_html/ch01.html#id542
 
 https://www.ibm.com/developerworks/cn/aix/library/au-ipc/index.html
 
-   
+http://www.cnblogs.com/whatbeg/p/4435286.html   
 
 
 | System V      | Posix.1-2001 .1-2008  | Cool  |
