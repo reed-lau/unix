@@ -11,6 +11,7 @@ http://www.cnblogs.com/whatbeg/p/4435286.html
 https://stackoverflow.com/questions/2584678/how-do-i-synchronize-access-to-shared-memory-in-lynxos-posix
 
 
+|                 Semaphore                     |
 | System V      | Posix.1-2001 .1-2008  | Cool  |
 | ------------- |:---------------------:| -----:|
 | semget        | sem_open              |       |
