@@ -18,3 +18,10 @@ https://stackoverflow.com/questions/2584678/how-do-i-synchronize-access-to-share
 | semctl        | sem_post              | unlock|
 |               | sem_close             |       |
 |               | sem_unlink            |       |
+
+
+| Shared Memory | Synchronization |              |
+|:-------------:|:---------------:|-------------:|
+|  Posix        |   Semaphore     |              |
+|  System V     |   Mutex & Cond  |              |
+
