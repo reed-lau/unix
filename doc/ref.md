@@ -12,6 +12,10 @@ https://stackoverflow.com/questions/2584678/how-do-i-synchronize-access-to-share
 
 http://lib.csdn.net/article/operatingsystem/40462
 
+lock free queue
+
+https://coolshell.cn/articles/8239.html
+
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.8674&rep=rep1&type=pdf
 
 
