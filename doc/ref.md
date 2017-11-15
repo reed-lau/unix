@@ -18,6 +18,8 @@ https://coolshell.cn/articles/8239.html
 
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.8674&rep=rep1&type=pdf
 
+https://www.ibm.com/developerworks/cn/aix/library/au-multithreaded_structures2/index.html
+
 
 ### Semaphore 
 | System V      | Posix.1-2001 .1-2008  | Cool  |
