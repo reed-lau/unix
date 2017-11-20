@@ -20,6 +20,8 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.8674&rep=rep1&type=p
 
 https://www.ibm.com/developerworks/cn/aix/library/au-multithreaded_structures2/index.html
 
+https://stackoverflow.com/questions/2489908/is-it-possible-to-store-pointers-in-shared-memory-without-using-offsets
+
 
 ### Semaphore 
 | System V      | Posix.1-2001 .1-2008  | Cool  |
