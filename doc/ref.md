@@ -38,3 +38,7 @@ https://stackoverflow.com/questions/2489908/is-it-possible-to-store-pointers-in-
 |  Posix        |   Semaphore     |              |
 |  System V     |   Mutex & Cond  |              |
 
+
+Memory Slab Nginx
+https://mp.weixin.qq.com/s/OkeCJSYyIUR01sF6ZT9Xmg?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com
+
