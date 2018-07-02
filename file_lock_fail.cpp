@@ -4,47 +4,52 @@
 #include <sys/file.h>
 #include <thread>
 
-int lock()
+class locker
 {
-   int fd;
-   int ret;
+    public:
+        locker() = default;
+    int lock()
+    {
+        int ret;
 
-   fd = open("lock.lock", O_CREAT | O_EXCL, 0700);
+        fd = open("lock.lock", O_CREAT | O_EXCL, 0777);
 
-   if ( fd != -1 )
-       close(fd);
+        if ( fd != -1 )
+            close(fd);
 
-   fd = open("lock.lock", O_RDWR );
-   if ( fd == -1 )
-     return -1;
+        fd = open("lock.lock", O_RDWR );
+        if ( fd == -1 )
+            return -1;
 
-   ret = flock(fd, LOCK_EX);
-   if ( ret == -1 )
-      return -1;
+        ret = flock(fd, LOCK_EX);
+        if ( ret == -1 )
+            return -1;
 
-   close(fd); 
+        //close(fd); 
 
-   return 0;
-}
+        return 0;
+    }
 
-int unlock()
-{
-   int fd;
-   int ret;
+    int unlock()
+    {
+        int ret;
 
-   fd = open("lock.lock", O_RDWR );
-   if ( fd == -1 )
-     return -1;
+    //    fd = open("lock.lock", O_RDWR );
+        if ( fd == -1 )
+            return -1;
 
-   ret = flock(fd, LOCK_UN);
-   if ( ret == -1 )
-      return -1;
+        ret = flock(fd, LOCK_UN);
+        if ( ret == -1 )
+            return -1;
 
-   close(fd); 
-//   unlink("lock.lock");
+        close(fd); 
+        // unlink("lock.lock");
 
-   return 0;
-}
+        return 0;
+    }
+private:
+    int fd;
+};
 
 int start = 0;
 long long sum = 0;
@@ -52,17 +57,17 @@ long long sum = 0;
 
 void foo()
 {
-    while(!start);
+    locker l;
+    while(!start)
+        ;
 
     for (int i=0; i<=100000; ++i)
     {
-
-	    lock();
+	    l.lock();
 
             sum += i;
   
-	    unlock();   
-
+	    l.unlock();   
     }
 }
 
